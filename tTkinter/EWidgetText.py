@@ -1,0 +1,36 @@
+"""
+Entry (Entrada de texto):
+Las entradas de texto permiten al usuario ingresar datos de texto, como nombres, contraseñas o números. Puedes 
+recuperar el texto ingresado por el usuario para su procesamiento.
+"""
+
+import pathlib
+from tkinter import *
+
+rutaAbsoluta: str = str(pathlib.Path().absolute())
+
+ventana: object = Tk()
+ventana.title("Ventana Principal")
+ventana.iconbitmap(rutaAbsoluta + "/recursos/icono.ico")
+ventana.geometry("750x450")
+ventana.resizable(1, 1)
+
+#1. Crear el Text, indicando a que ventana va a pertenercer.
+txt: object = Text(ventana)
+
+#2. Configurar el Text.
+txt.config(
+    width = 30,
+    height = 10,
+    fg = "black", #Color de letra.
+    bg = "green", #Color de fondo.
+    padx = 20, #Relleno del Widget en eje x.
+    pady = 20, #Relleno del Widget en eje y.
+    font = ("Arial", 12), #Fuente de la letra y tamaño.
+    cursor = "circle" #Indica la forma del cursor cuando se pasa el mouse por encima.
+)
+
+#3. Empaquetar el Text (Esto permite que se muestre).
+txt.pack()
+
+ventana.mainloop()
