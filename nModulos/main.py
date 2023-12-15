@@ -37,4 +37,5 @@ print(math.ceil(1.5)) #La función "ceil" redondea un numero hacia arriba.
 print(math.floor(1.5)) #La función "floor" redondea un numero hacia abajo.
 
 print("---------Uso de modulos de terceros (Random)---------")
+
 print(random.randint(15, 65)) #La función "randint" permite calcular un número aleatorio entre los 2 parámetros entregados.
