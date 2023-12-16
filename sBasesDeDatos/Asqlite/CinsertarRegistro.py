@@ -14,7 +14,6 @@ cursor.execute("INSERT INTO producto VALUES(null, 'Producto 1', 'Mi Descripcion 
 cursor.execute("INSERT INTO producto VALUES(null, 'Producto 2', 'Mi Descripcion 2', 4500)")
 cursor.execute("INSERT INTO producto VALUES(null, 'Producto 3', 'Mi Descripcion 3', 5500)")
 
-
 productos: list = [
     ("Producto 4", "Mi Descripcion 4", 6500),
     ("Producto 5", "Mi Descripcion 5", 7500),
