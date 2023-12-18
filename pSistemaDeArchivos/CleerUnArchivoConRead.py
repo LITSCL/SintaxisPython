@@ -1,10 +1,10 @@
 from _io import open
 import pathlib
 
-rutaAbsoluta: str = str(pathlib.Path().absolute())
+ruta_absoluta: str = str(pathlib.Path().absolute())
 
 #1. Abriendo el archivo (Permite trabajar con él).
-archivo: object = open(rutaAbsoluta + "/01-archivo.txt", "r")
+archivo: object = open(ruta_absoluta + "/01-archivo.txt", "r")
 
 #2. Leyendo el archivo (Se almacena todo el conenido en la variable).
 contenido: str = archivo.read()
