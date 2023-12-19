@@ -66,12 +66,12 @@ print(auto.modelo)
 print(auto.velocidad_actual)
 
 print("----------Modificando el atributo mediante Setters----------")
-auto.color = "Verde"
-auto.marca = "Tesla"
-auto.modelo = "Model V"
-auto.velocidad_actual = 70
+auto.set_color("Verde")
+auto.set_marca("Tesla")
+auto.set_modelo("Model V")
+auto.set_velocidad_actual(70)
 
-print(auto.color)
-print(auto.marca)
-print(auto.modelo)
-print(auto.velocidad_actual)
+print(auto.get_color())
+print(auto.get_marca())
+print(auto.get_modelo())
+print(auto.get_velocidad_actual())
