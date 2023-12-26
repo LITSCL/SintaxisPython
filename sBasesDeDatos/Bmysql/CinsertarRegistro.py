@@ -20,7 +20,7 @@ cursor.execute("INSERT INTO producto VALUES(null, 'Producto 3', 'Mi Descripcion 
 productos: list = [
     ("Producto 4", "Mi Descripcion 4", 6500),
     ("Producto 5", "Mi Descripcion 5", 7500),
-    ("Producto 6", "Mi Descripcion 6", 8500),
+    ("Producto 6", "Mi Descripcion 6", 8500)
 ]
 
 #4. Insertar una lista con registros (Cada registro debe estar organizado como tupla).
