@@ -16,10 +16,11 @@ ventana.geometry("750x450")
 ventana.resizable(1, 1)
 
 #1. Crear el Entry, indicando a que ventana va a pertenercer.
-etr: object = Entry(ventana, show = "*") #El argumento "show", permite ocultar los caracteres ingresados.
+etr: object = Entry(ventana) 
 
 #2. Configurar el Entry.
 etr.config(
+    show = "*", #El argumento "show", permite ocultar los caracteres ingresados.
     fg = "black", #Color de letra.
     bg = "green", #Color de fondo.
     font = ("Arial", 12), #Fuente de la letra y tamaño.

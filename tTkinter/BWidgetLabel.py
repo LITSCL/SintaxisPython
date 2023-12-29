@@ -16,10 +16,11 @@ ventana.geometry("750x450")
 ventana.resizable(1, 1)
 
 #1. Crear el Label, indicando a que ventana va a pertenercer.
-lbl: object = Label(ventana, text = "Hola, soy el texto del Label.")
+lbl: object = Label(ventana)
 
 #2. Configurar el Label.
 lbl.config(
+    text = "Hola, soy el texto del Label.",
     fg = "white", #Color de letra.
     bg = "black", #Color de fondo.
     padx = 20, #Relleno del Widget en eje x.
