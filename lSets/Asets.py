@@ -12,6 +12,8 @@ peliculas.remove("Alien")
 
 print(peliculas)
 
+print("Terminator" in peliculas) #Imprimiendo True o False si existe o no "Terminator" en el set.
+
 
 
 
