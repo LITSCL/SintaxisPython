@@ -1,5 +1,5 @@
 """
-Button (Botón):
+Check Button (Checkbox):
 Este widget permite a los usuarios realizar acciones al hacer click en el botón. Se puede asociar una función 
 o un comando al botón para que se ejecute cuando el usuario lo presiona.
 """
