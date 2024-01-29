@@ -28,7 +28,7 @@ opciones: list = ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
 om: object = OptionMenu(ventana, opcion, *opciones)
 
 #5. Definir la función controladora.
-def mostrar():
+def mostrar() -> None:
     print(opcion.get())
 
 btn: object = Button(ventana)

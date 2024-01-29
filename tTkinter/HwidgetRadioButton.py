@@ -26,7 +26,7 @@ rb_1: object = Radiobutton(ventana)
 rb_2: object = Radiobutton(ventana)
 
 #4. Definir la función controladora.
-def mostrar():
+def mostrar() -> None:
     print(opcion.get())
 
 #5. Configurar los Radiobuttons.
