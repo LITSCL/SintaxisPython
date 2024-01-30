@@ -7,11 +7,11 @@ o un comando al botón para que se ejecute cuando el usuario lo presiona.
 import pathlib
 from tkinter import *
 
-rutaAbsoluta: str = str(pathlib.Path().absolute())
+ruta_absoluta: str = str(pathlib.Path().absolute())
 
 ventana: object = Tk()
 ventana.title("Ventana Principal")
-ventana.iconbitmap(rutaAbsoluta + "/recursos/icono.ico")
+ventana.iconbitmap(ruta_absoluta + "/recursos/icono.ico")
 ventana.geometry("750x450")
 ventana.resizable(1, 1)
 

@@ -1,7 +1,7 @@
 import pathlib
 from tkinter import *
 
-rutaAbsoluta: str = str(pathlib.Path().absolute())
+ruta_absoluta: str = str(pathlib.Path().absolute())
 
 #Crear la ventana raíz.
 ventana: object = Tk()
@@ -10,7 +10,7 @@ ventana: object = Tk()
 ventana.title("Ventana Principal")
 
 #Asignar el icono a la ventana.
-ventana.iconbitmap(rutaAbsoluta + "/recursos/icono.ico")
+ventana.iconbitmap(ruta_absoluta + "/recursos/icono.ico")
 
 #Dimensionar la ventana raíz.
 ventana.geometry("750x450")
