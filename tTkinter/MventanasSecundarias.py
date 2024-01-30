@@ -53,7 +53,7 @@ class MainFrame:
         self.ventana_principal.resizable(1, 1)
 
         #1.3 Añadir los widgets al frame.
-        Button(ventana_principal, text = "Abrir Ventana Secundaria", command = self.mostrar_secundario_frame).pack(pady = 20)
+        Button(ventana_principal, text = "Mostrar Ventana Secundaria", command = self.mostrar_secundario_frame).pack(pady = 20)
     
     #2. Método de muetreo del frame principal.
     def mostrar(self) -> None:
