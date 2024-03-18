@@ -42,7 +42,7 @@ chk_3.config(
     offvalue = 0,
 )
 
-#3. Empaquetar los Checkbuttons (Esto permite que se muestre).
+#3. Empaquetar los Checkbuttons (Esto permite que se muestren).
 chk_1.pack()
 chk_2.pack()
 chk_3.pack()

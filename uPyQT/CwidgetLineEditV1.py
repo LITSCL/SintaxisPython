@@ -18,7 +18,6 @@ ventana.setGeometry(100, 100, 750, 450)
 le: object = QLineEdit(ventana)
 
 #2. Configurar el LineEdit.
-
 le.setStyleSheet("color: black; background-color: green; font: 12pt Arial;") #Estilos CSS del LineEdit.
 le.move(10, 10) #Especificar el margen de la izquierda y superior del LineEdit.
 le.resize(300, 30) #Indicando las dimensiones del LineEdit.
