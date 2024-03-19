@@ -13,7 +13,7 @@ class EjemploNodo(BaseNode):
         super(EjemploNodo, self).__init__()
 
         frutas: list = ["Manzanas", "Platanos", "Peras", "Mangos", "Naranjas"]
-        self.add_combo_menu("listado", "Listado", frutas) #Añadiendo el widget ComboMenu con sus respectivos elementos.
+        self.add_combo_menu("listado", label = "Listado", items = frutas) #Añadiendo el widget ComboMenu con sus respectivos elementos.
 
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])
