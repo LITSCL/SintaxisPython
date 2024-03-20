@@ -19,8 +19,14 @@ def menu_funcion_1() -> None:
 def menu_funcion_2() -> None:
     print("Funcion 2")
 
-if (__name__ == "__main__"):
-    app: object = QtWidgets.QApplication([])
+def menu_funcion_3() -> None:
+    print("Funcion 3")
+
+def menu_funcion_4() -> None:
+    print("Funcion 4")
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
 
     controlador: object = NodeGraph()
 
@@ -32,6 +38,13 @@ if (__name__ == "__main__"):
     #Añadiendo los seleccionables con sus respectivas funciones.
     menu_contextual_grafico.add_command("Test 1", func = menu_funcion_1)
     menu_contextual_grafico.add_command("Test 2", func = menu_funcion_2)
+
+    #Agregando un nuevo menú llamado "Listado".
+    menu_listado: object = menu_contextual_grafico.add_menu("Listado")
+
+    #Agregando seleccionables al menú "Listado".
+    menu_listado.add_command("Test 3", func = menu_funcion_3)
+    menu_listado.add_command("Test 4", func = menu_funcion_4)
 
     ventana: object = controlador.widget
     ventana.show()
