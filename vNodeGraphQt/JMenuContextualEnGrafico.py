@@ -10,8 +10,8 @@ class EjemploNodo(BaseNode):
     def __init__(self) -> None:
         super(EjemploNodo, self).__init__()
 
-        self.add_input("Entrada", color = (180, 80, 0))
-        self.add_output("Salida")
+        puerto_a: object = self.add_input("Entrada", color = (180, 80, 0))
+        puerto_b: object = self.add_output("Salida")
 
 def menu_funcion_1() -> None:
     print("Funcion 1")

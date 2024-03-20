@@ -11,10 +11,10 @@ class EjemploNodo(BaseNode):
     #Estructura del nodo.
     def __init__(self) -> None:
         super(EjemploNodo, self).__init__()
-        self.add_input("Entrada 1")
-        self.add_input("Entrada 2")
-        self.add_output("Salida 1")
-        self.add_output("Salida 2")
+        puerto_a: object = self.add_input("Entrada 1")
+        puerto_b: object = self.add_input("Entrada 2")
+        puerto_c: object = self.add_output("Salida 1")
+        puerto_d: object = self.add_output("Salida 2")
 
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])

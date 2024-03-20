@@ -1,6 +1,6 @@
 from Qt import QtWidgets
 from NodeGraphQt import NodeGraph, BaseNode
-from NodeGraphQt.constants import PipeLayoutEnum
+from NodeGraphQt.constants import LayoutDirectionEnum
 
 class EjemploNodo(BaseNode):
 
@@ -19,17 +19,17 @@ if (__name__ == "__main__"):
 
     controlador: object = NodeGraph()
 
-    #Cambiar la forma en la que se organizan las tuberías.
-    controlador.set_pipe_style(PipeLayoutEnum.ANGLE.value) #Organización en ángulos de 90°.
-    controlador.set_pipe_style(PipeLayoutEnum.STRAIGHT.value) #Organización en líneas rectas.
-
     controlador.register_node(EjemploNodo)
+
+    #Cambiar la dirección del layout.
+    controlador.set_layout_direction(LayoutDirectionEnum.HORIZONTAL.value) #Asignar dirección del Layout de izquierda a derecha.
+    controlador.set_layout_direction(LayoutDirectionEnum.VERTICAL.value) #Asignar dirección del layout de arriba hacia abajo.
 
     ventana: object = controlador.widget
     ventana.show()
 
     nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 150))
 
     nodo_a.set_output(0, nodo_b.input(0))
 

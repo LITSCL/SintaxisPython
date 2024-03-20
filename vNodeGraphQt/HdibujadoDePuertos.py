@@ -10,8 +10,8 @@ class EjemploNodo(BaseNode):
     def __init__(self) -> None:
         super(EjemploNodo, self).__init__()
 
-        self.add_input("Entrada", color = (180, 80, 0), painter_func = self.dibujar_puerto_triangular) #El parámetro "painter_func", recibe la función pintora.
-        self.add_output("Salida")
+        puerto_a: object = self.add_input("Entrada", color = (180, 80, 0), painter_func = self.dibujar_puerto_triangular) #El parámetro "painter_func", recibe la función pintora.
+        puerto_b: object = self.add_output("Salida")
 
     #Metodos de dibujado de puertos.
     def dibujar_puerto_cuadrado(self, painter: object, rect: object, info: dict) -> None:
