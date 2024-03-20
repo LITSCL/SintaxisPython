@@ -39,6 +39,9 @@ if __name__ == "__main__":
     menu_contextual_grafico.add_command("Test 1", func = menu_funcion_1)
     menu_contextual_grafico.add_command("Test 2", func = menu_funcion_2)
 
+    #Agregando una linea separadora.
+    menu_contextual_grafico.add_separator()
+
     #Agregando un nuevo menú llamado "Listado".
     menu_listado: object = menu_contextual_grafico.add_menu("Listado")
 
