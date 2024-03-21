@@ -28,37 +28,37 @@ if (__name__ == "__main__"):
     nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     #Obtener puerto.
-    puerto_c: object = nodo_a.get_output(2)
+    puerto_d: object = nodo_a.get_output(2)
 
     #Obtener el nombre del puerto.
-    nombre_puerto: str = puerto_c.name()
+    nombre_puerto: str = puerto_d.name()
     print(f"Nombre del puerto: {nombre_puerto}")
 
     #Hacer visible o invisible un puerto.
-    puerto_c.set_visible(True)
+    puerto_d.set_visible(True)
 
     #Obtener si el puerto es visible o no actualmente.
-    visibilidad_puerto: bool = puerto_c.visible()
+    visibilidad_puerto: bool = puerto_d.visible()
     print(f"Puerto visible: {visibilidad_puerto}")
 
     #Bloquear el puerto (No se pueden sacar tuberías de allí).
-    puerto_c.set_locked(False)
+    puerto_d.set_locked(False)
 
     #Obtener si el puerto esta bloqueado o no actualmente.
-    bloqueo_puerto: bool = puerto_c.locked()
+    bloqueo_puerto: bool = puerto_d.locked()
     print(f"Puerto bloqueado: {bloqueo_puerto}")
 
     #Conectar un puerto a otro.
     nodo_a.set_output(2, nodo_b.input(0))
 
     #Obtener los puertos ajenos conectados a este.
-    puertos_conectados: list = puerto_c.connected_ports()
+    puertos_conectados: list = puerto_d.connected_ports()
     print(puertos_conectados)
 
     #Desconectar un puerto especifico que está conectado a este.
-    puerto_c.disconnect_from(puerto_c.connected_ports()[0])
+    puerto_d.disconnect_from(puerto_d.connected_ports()[0])
 
     #Desconectar todos los puertos ajenos conectados a este.
-    puerto_c.clear_connections()
+    puerto_d.clear_connections()
 
     app.exec_()
