@@ -29,8 +29,8 @@ if (__name__ == "__main__"):
     menu_contextual_nodos: object = controlador.get_context_menu("nodes")
 
     #Añadiendo los seleccionables con sus respectivas funciones.
-    menu_contextual_nodos.add_command("Test 1", func = EjemploNodo.menu_funcion_1, node_type = "cl.litscl.ejemplonodo.EjemploNodo", node_class = EjemploNodo)
-    menu_contextual_nodos.add_command("Test 2", func = EjemploNodo.menu_funcion_2, node_type = "cl.litscl.ejemplonodo.EjemploNodo", node_class = EjemploNodo)
+    menu_contextual_nodos.add_command("Test 1", func = EjemploNodo.menu_funcion_1, node_type = "cl.litscl.ejemplonodo.EjemploNodo")
+    menu_contextual_nodos.add_command("Test 2", func = EjemploNodo.menu_funcion_2, node_type = "cl.litscl.ejemplonodo.EjemploNodo", shortcut = "SHIFT+T")
 
     ventana: object = controlador.widget
     ventana.show()

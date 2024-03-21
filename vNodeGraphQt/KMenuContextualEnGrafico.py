@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     #Agregando seleccionables al menú "Listado".
     menu_listado.add_command("Test 3", func = menu_funcion_3)
-    menu_listado.add_command("Test 4", func = menu_funcion_4)
+    menu_listado.add_command("Test 4", func = menu_funcion_4, shortcut = "SHIFT+T")
 
     ventana: object = controlador.widget
     ventana.show()
