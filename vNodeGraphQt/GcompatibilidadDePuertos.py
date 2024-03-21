@@ -3,9 +3,7 @@ from NodeGraphQt import NodeGraph, BaseNode
 from NodeGraphQt.constants import PortTypeEnum
 
 class EjemploNodo(BaseNode):
-
     __identifier__: str = "cl.litscl.ejemplonodo"
-
     NODE_NAME: str = "Ejemplo Nodo"
 
     def __init__(self) -> None:

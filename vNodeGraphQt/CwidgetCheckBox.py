@@ -3,9 +3,7 @@ from NodeGraphQt import BaseNode, NodeGraph
 
 #Nodo personalizado.
 class EjemploNodo(BaseNode):
-
     __identifier__: str = "cl.litscl.ejemplonodo"
-
     NODE_NAME: str = "Ejemplo Nodo"
 
     #Estructura del nodo.

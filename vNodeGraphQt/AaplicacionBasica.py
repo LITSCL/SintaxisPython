@@ -39,7 +39,7 @@ if (__name__ == "__main__"):
     nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     #Conectar los nodos (Opcional).
-    #nodo_a.set_output(0, nodo_b.input(0)) #La salida del A se conecta a la entrada del B.
+    nodo_a.set_output(0, nodo_b.input(0)) #La salida del A se conecta a la entrada del B.
 
     #Iniciar el bucle de eventos (Mantiene en ejecución la aplicación Qt).
     app.exec_()
