@@ -61,4 +61,10 @@ if (__name__ == "__main__"):
     #Desconectar todos los puertos ajenos conectados a este.
     puerto_d.clear_connections()
 
+    #Cambiar el color interno del puerto.
+    puerto_d.color = (3, 252, 57)
+    
+    #Cambiar el color del borde del puerto.
+    puerto_d.border_color = (252, 3, 40)
+
     app.exec_()
