@@ -24,19 +24,19 @@ if (__name__ == "__main__"):
     #Instanciar la aplicación Qt.
     app: object = QtWidgets.QApplication([])
 
-    #Crear el controlador de nodos de la aplicación.
-    controlador: object = NodeGraph()
+    #Crear el grafico de nodos de la aplicación.
+    grafico: object = NodeGraph()
 
     #Registrar las clases que permiten instanciar nodos.
-    controlador.register_node(EjemploNodo)
+    grafico.register_node(EjemploNodo)
 
     #Crear y mostrar la ventana principal.
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
     #Instanciar nodos (Opcional).
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     #Conectar los nodos (Opcional).
     nodo_a.set_output(0, nodo_b.input(0)) #La salida del A se conecta a la entrada del B.

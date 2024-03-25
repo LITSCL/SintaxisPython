@@ -33,15 +33,15 @@ class EjemploNodo(BaseNode):
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])
 
-    controlador: object = NodeGraph()
+    grafico: object = NodeGraph()
 
-    controlador.register_node(EjemploNodo)
+    grafico.register_node(EjemploNodo)
 
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     nodo_a.set_output(0, nodo_b.input(0))
     nodo_a.set_output(2, nodo_b.input(1))

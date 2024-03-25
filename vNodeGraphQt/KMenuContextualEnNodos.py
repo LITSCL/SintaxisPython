@@ -21,22 +21,22 @@ class EjemploNodo(BaseNode):
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])
 
-    controlador: object = NodeGraph()
+    grafico: object = NodeGraph()
 
-    controlador.register_node(EjemploNodo)
+    grafico.register_node(EjemploNodo)
 
     #Habilitando el menú contextual para los nodos.
-    menu_contextual_nodos: object = controlador.get_context_menu("nodes")
+    menu_contextual_nodos: object = grafico.get_context_menu("nodes")
 
     #Añadiendo los seleccionables con sus respectivas funciones.
     menu_contextual_nodos.add_command("Test 1", func = EjemploNodo.menu_funcion_1, node_type = "cl.litscl.ejemplonodo.EjemploNodo")
     menu_contextual_nodos.add_command("Test 2", func = EjemploNodo.menu_funcion_2, node_type = "cl.litscl.ejemplonodo.EjemploNodo", shortcut = "SHIFT+T")
 
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     nodo_a.set_output(0, nodo_b.input(0))
 

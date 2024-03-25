@@ -18,15 +18,15 @@ class EjemploNodoCircle(BaseNodeCircle):
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])
 
-    controlador: object = NodeGraph()
+    grafico: object = NodeGraph()
 
-    controlador.register_node(EjemploNodoCircle)
+    grafico.register_node(EjemploNodoCircle)
 
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
     #Instanciar nodos (Opcional).
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodocircle.EjemploNodoCircle", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodocircle.EjemploNodoCircle", name = "Nodo B", pos = [300, 100])
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodocircle.EjemploNodoCircle", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodocircle.EjemploNodoCircle", name = "Nodo B", pos = [300, 100])
 
     app.exec_()

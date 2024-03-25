@@ -26,12 +26,12 @@ def menu_funcion_4() -> None:
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
 
-    controlador: object = NodeGraph()
+    grafico: object = NodeGraph()
 
-    controlador.register_node(EjemploNodo)
+    grafico.register_node(EjemploNodo)
 
     #Habilitando el menú contextual para el gráfico.
-    menu_contextual_grafico: object = controlador.get_context_menu("graph")
+    menu_contextual_grafico: object = grafico.get_context_menu("graph")
 
     #Añadiendo los seleccionables con sus respectivas funciones.
     menu_contextual_grafico.add_command("Test 1", func = menu_funcion_1)
@@ -47,11 +47,11 @@ if __name__ == "__main__":
     menu_listado.add_command("Test 3", func = menu_funcion_3)
     menu_listado.add_command("Test 4", func = menu_funcion_4, shortcut = "SHIFT+T")
 
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
 
     nodo_a.set_output(0, nodo_b.input(0))
 

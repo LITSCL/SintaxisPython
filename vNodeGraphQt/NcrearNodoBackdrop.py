@@ -23,21 +23,21 @@ class EjemploNodoBackdrop(BackdropNode):
 if (__name__ == "__main__"):
     app: object = QtWidgets.QApplication([])
 
-    controlador: object = NodeGraph()
+    grafico: object = NodeGraph()
 
-    controlador.register_node(EjemploNodo)
+    grafico.register_node(EjemploNodo)
 
     #Registrar el nodo Backdrop.
-    controlador.register_node(EjemploNodoBackdrop)
+    grafico.register_node(EjemploNodoBackdrop)
 
-    ventana: object = controlador.widget
+    ventana: object = grafico.widget
     ventana.show()
 
-    nodo_a: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
-    nodo_b: object = controlador.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
+    nodo_a: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo A")
+    nodo_b: object = grafico.create_node("cl.litscl.ejemplonodo.EjemploNodo", name = "Nodo B", pos = (300, 50))
     
     #Crear el nodo Backdrop.
-    nodo_c: object = controlador.create_node("cl.litscl.ejemplonodobackdrop.EjemploNodoBackdrop", name = "Nodo Backdrop")
+    nodo_c: object = grafico.create_node("cl.litscl.ejemplonodobackdrop.EjemploNodoBackdrop", name = "Nodo Backdrop")
 
     #Configurar el nodo Backdrop.
     nodo_c.set_size(300, 300)
